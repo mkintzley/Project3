@@ -226,7 +226,6 @@ export class TvApp extends LitElement {
 
 
   async loadData() {
-    // Fetch data from the source
     await fetch(this.source)
       .then((resp) => (resp.ok ? resp.json() : []))
       .then((responseData) => {
@@ -314,7 +313,6 @@ export class TvApp extends LitElement {
     this.activeIndex = 0;
   }
 
-  // LitElement life cycle for when any property changes
   updated(changedProperties) {
     if (super.updated) {
       super.updated(changedProperties);
